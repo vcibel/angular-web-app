@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 
 import { MatSidenavModule, MatToolbarModule, MatInputModule, MatCardModule,
          MatButtonModule, MatGridListModule, MatListModule, MatDialogModule } from '@angular/material';
-import { PokemonService } from './service/pokemon/pokemon.service';
+import { PokemonService } from './pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeDataComponent } from './poke-data/poke-data.component';
 import { FormsModule } from '@angular/forms';
