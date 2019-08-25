@@ -103,20 +103,14 @@ export class HomeComponent implements OnInit {
           console.log(pokemon)
           this.searchResult.push(pokemon);
         } 
-        // else if (pokemon.pokemon_code.toLowerCase().indexOf(input.toLowerCase()) > -1) {
-        //   this.searchResult.push(pokemon);
-        // }
       });
     }
 
     if (value === true && this.searchResult.length === 0) {
       console.log('not found');
-      // this.found = false;
     } else {
       console.log('found');
-      // this.found = true;
     }
-    // console.log(this.searchResult);
   }
 
 }
