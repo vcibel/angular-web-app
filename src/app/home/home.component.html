@@ -1,0 +1,40 @@
+<mat-drawer-container class="container">
+    <mat-drawer mode="side" opened style="width: 280px; background-color: #ffd245">
+        <div class="menu">
+            <img class="img-menu" src="http://localhost:4200/assets/pikachu-menu2.jpg" alt="">
+            <mat-list role="list" style="position: relative; top: 36%;">
+                <mat-list-item *ngFor="let poke of searchResult" style="padding: 10px;">
+                    <button mat-button (click)="openPokemon(poke)">
+                        <img class="img-poke" src={{poke.image}} alt="">
+                    </button>
+                    <h4 mat-line>{{poke.name}}</h4>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar class="toolbar">
+            <img class="img-tool" src="http://localhost:4200/assets/pokemon.jpg" alt="">
+
+            <form class="example-form">
+                <label for="college-name">Buscador:</label>
+                <mat-form-field>
+                    <input matInput type="text" class="form-control" [(ngModel)]="input" (keyup)="search(input)" [ngModelOptions]="{standalone: true}">
+                </mat-form-field>
+            </form>
+        </mat-toolbar>
+        <mat-grid-list cols="5" rowHeight="250px">
+            <mat-grid-tile *ngFor="let poke of pokemon" >
+                <mat-card mat-button (click)="openPokemon(poke)" class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>{{poke.name}}</mat-card-title>
+                        <mat-card-subtitle>Nº {{poke.id}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <button mat-button >
+                        <img mat-card-image src={{poke.image}} class="img-home">
+                    </button>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-drawer-content>
+</mat-drawer-container>
