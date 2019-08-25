@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
-import { PokemonService } from '../service/pokemon/pokemon.service';
+import { PokemonService } from '../pokemon.service';
 import { Pokemon } from '../models/pokemon';
 
 @Component({
